@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: wluh1
+    repository: k8s-ci-cd-jx
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 35.241.195.23
     kind: ingress
     namespaceSubDomain: -kuberhealthy.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: wluh1
   repository: bucketrepo
   secretStorage: local
   vault: {}
