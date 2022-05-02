@@ -20,7 +20,7 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: "http://35.241.195.23/"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
