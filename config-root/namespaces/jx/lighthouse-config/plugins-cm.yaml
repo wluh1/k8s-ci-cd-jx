@@ -6,6 +6,10 @@ data:
       repos:
       - wluh1/k8s-ci-cd-jx
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - wluh1/jx-go-quickstart
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      wluh1/jx-go-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       wluh1/k8s-ci-cd-jx:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -26,6 +35,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      wluh1/jx-go-quickstart:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       wluh1/k8s-ci-cd-jx:
       - config-updater
       - approve
@@ -55,6 +80,11 @@ data:
     - repos:
       - wluh1/k8s-ci-cd-jx
       trusted_org: todo
+    - repos:
+      - wluh1/jx-go-quickstart
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

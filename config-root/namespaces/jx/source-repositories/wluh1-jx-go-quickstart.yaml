@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: wluh1
+    provider: github
+    repository: jx-go-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: wluh1-jx-go-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/wluh1/jx-go-quickstart.git
+  org: wluh1
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-go-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/wluh1/jx-go-quickstart

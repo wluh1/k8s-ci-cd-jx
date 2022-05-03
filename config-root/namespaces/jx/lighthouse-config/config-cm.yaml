@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        wluh1/jx-go-quickstart: true
         wluh1/k8s-ci-cd-jx: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        wluh1/jx-go-quickstart: merge
         wluh1/k8s-ci-cd-jx: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - wluh1/k8s-ci-cd-jx
+        - wluh1/jx-go-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - wluh1/k8s-ci-cd-jx
+        - wluh1/jx-go-quickstart
       target_url: http://lighthouse-jx.35.241.195.23/merge/status
 kind: ConfigMap
 metadata:
