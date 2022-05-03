@@ -24,7 +24,7 @@ spec:
   ingress:
     domain: 35.241.195.23
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: false
