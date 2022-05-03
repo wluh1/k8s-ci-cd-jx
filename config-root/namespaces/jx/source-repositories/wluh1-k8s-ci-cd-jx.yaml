@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: wluh1
+    provider: github
+    repository: k8s-ci-cd-jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: wluh1-k8s-ci-cd-jx
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/wluh1/k8s-ci-cd-jx.git
+  org: wluh1
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: k8s-ci-cd-jx
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/wluh1/k8s-ci-cd-jx

@@ -10,6 +10,10 @@ data:
       repos:
       - wluh1/jx-go-quickstart
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - wluh1/k8s-ci-cd-jx
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -82,6 +86,9 @@ data:
       trusted_org: todo
     - repos:
       - wluh1/jx-go-quickstart
+      trusted_org: todo
+    - repos:
+      - wluh1/k8s-ci-cd-jx
       trusted_org: todo
     welcome:
     - message_template: Welcome
