@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: jx-go-quickstart
+    - name: k8s-ci-cd-jx
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
